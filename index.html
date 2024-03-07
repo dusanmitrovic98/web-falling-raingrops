@@ -18,30 +18,20 @@
 </head>
 <body>
   <canvas id="raindropsCanvas"></canvas>
-
   <script>
     const canvas = document.getElementById("raindropsCanvas");
-    
     const ctx = canvas.getContext("2d");
-
     canvas.width = window.innerWidth;
-    
     canvas.height = window.innerHeight;
-
     const raindrops = [];
-    
     const maxRaindrops = 100;
 
     class Raindrop {
       constructor() {
         this.x = Math.random() * canvas.width;
-        
         this.y = Math.random() * -canvas.height;
-        
         this.size = Math.random() * 5 + 2; 
-        
         this.speed = Math.random() * 5 + 2; 
-        
       }
 
       update() {
@@ -49,7 +39,6 @@
 
         if (this.y > canvas.height) {
           this.x = Math.random() * canvas.width;
-          
           this.y = Math.random() * -canvas.height;
         }
       }
